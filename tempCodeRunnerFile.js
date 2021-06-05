@@ -1,1 +1,0 @@
-elstick", "location": "bedroom"}};

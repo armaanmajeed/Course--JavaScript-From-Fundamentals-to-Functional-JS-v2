@@ -34,3 +34,27 @@ loop1();
 // Assigning colors to strings using destructuring
 var [{color: firstName}, {color: secondName}] = games.suspects;
 console.log(firstName, secondName);
+
+// Using functions
+function CreateSuspectObjects (name) {
+    return {
+        name: name,
+        color: name.split(' ')[1],
+        speak() {
+            console.log(`My name is ${name}`)
+        }
+    };
+};
+
+var suspects = ["Miss Scarlet", "Colonel Mustard", "Mr White"];
+
+var suspectsList = [];
+// Using forEach to loop
+suspects.forEach(function(name) {
+    suspectsList.push(CreateSuspectObjects(name));
+});
+
+for (let i = 0; i < suspectsList.length; i++) {
+    console.log(suspectsList[i]);
+}
+console.log("----------------End----------------");
