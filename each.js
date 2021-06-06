@@ -20,3 +20,6 @@ _.each(["AMK", "Jitu", "Mayank"], function(name, i, list) {
         console.log(name, "is the oldest");
     }
 })
+
+// We can _.each or _.map and many more methods by including underscore.js library.
+console.log("----------------End----------------");
