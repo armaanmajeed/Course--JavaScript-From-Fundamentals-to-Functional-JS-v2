@@ -88,14 +88,19 @@ const videoData = [
     }
 ];
 
-var sl = [];
-
-sl = _.filter(videoData, function(suspectObject) {
+var sl = _.filter(videoData, function(suspectObject) {
     return suspectObject.present;
 });
 
-for (let key in sl) {
-    console.log(sl[key]);
+var slName = _.map(sl, sl => {
+    return sl.name;
+});
+
+for (let key in slName) {
+    console.log(slName[key]);
 }
+
+console.log(sl);
+console.log(slName);
 
 console.log("----------------End----------------");
